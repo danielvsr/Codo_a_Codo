@@ -1,5 +1,5 @@
 .fondo{
-    background-image: url(https://i.ibb.co/Zh4XRyv/ba1.jpg); 
+    background-image: url(/img/ba1.jpg); 
     height: 650px;
     background-size: cover;
 }
@@ -9,34 +9,34 @@
     height: 650px; 
 }
 .caja{
-    border: 1px solid white;
     height: 550px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 5px;
     padding: 10px;
-    grid-auto-rows: minmax(100px, auto);
+    grid-auto-rows: minmax(50px, auto);
     align-content: center;
 }
 .caja1{
-    border: 1px solid white;
     grid-column: 3;
     grid-row: 2;
-    text-align:center;
-    justify-content: baseline;
+    text-align:start;
+    align-self: flex-end;
+    padding-left: 0.5rem;
+    margin-bottom: -3px;
 }
 .caja2{
-    border: 1px solid white;
     grid-column: 3;
     grid-row: 3;
+    text-align: end;
+    padding-right: 1rem;
 }
 .caja3{
-    border: 1px solid white;
     grid-column: 3;
     grid-row: 4;
 }
 
-
+/*BREAKPOINT LG*/
 @media screen and (max-width: 992px){
     .fondo{
         background-size: cover;
@@ -47,7 +47,29 @@
     .fondo-oscuro{
         height: 500px;
     }
+    .li-size{
+        text-align: center;
+    }
+    .caja{
+        height: 400px;
+        grid-template-columns: repeat(2, 1fr);    
+    }
+    .caja1 {
+        grid-column: 2;
+        grid-row:2;
+    }
+    .caja2{
+        grid-column: 2;
+        grid-row:3;
+    }
+    .caja3{
+        grid-column: 2;
+        grid-row:4;
+        align-self: end;
+    }
 }
+
+/*BREAKPOINT MD*/
 @media screen and (max-width: 768px){
     .fondo{
         background-size: cover;
@@ -58,8 +80,28 @@
     .fondo-oscuro{
         height: 400px;
     }
+    .caja{
+        height: 300px;
+        grid-template-columns: repeat(2, 1fr);    
+    }
+    .caja1 {
+        grid-column: 2;
+        grid-row:1;
+    }
+    .caja2{
+        grid-column: 2;
+        grid-row:2;
+        font-size: 0.9rem;
+    }
+    .caja3{
+        grid-column: 2;
+        grid-row:3;
+        align-self: end;
+    }
 }
-@media screen and (max-width: 576px){
+
+/*BREAKPOINT XS & SM*/
+@media screen and (max-width: 615px){
     .fondo{
         background-size: cover;
         background-repeat: no-repeat;
@@ -68,5 +110,28 @@
     }
     .fondo-oscuro{
         height: 385px;
+    }
+    .caja{
+        height: 300px;
+        grid-template-columns: 1fr;    
+    }
+    .caja1 {
+        grid-column: 1;
+        grid-row:1;
+        align-self: end;
+        justify-self: self-end;
+        padding-right: 1rem;
+    }
+    .caja2{
+        grid-column: 1;
+        grid-row:2;
+        font-size: 0.9rem;
+    }
+    .caja3{
+        grid-column: 1;
+        grid-row:3;
+        align-self: end;
+        justify-self: self-end;
+        padding-right: 1rem;
     }
 }
