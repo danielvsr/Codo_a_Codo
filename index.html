@@ -8,6 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
     crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="style.css">
     <title><codo a codo/></title>
 </head>
@@ -28,18 +29,18 @@
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="menu-principal">
                     <ul class="navbar-nav li-size">
-                        <li class="nav-item"><a class="nav-link text-light active" aria-current="page" href="#">La conferencia</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Los oradores</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">El lugar y la fecha</a></li>
-                        <li class="nav-item"><a class="nav-link text-light" href="#">Conviertete en ordador</a></li>
-                        <li class="nav-item"><a class="nav-link text-success" href="#">Comprar tickets</a></li>
+                        <li class="nav-item"><a class="nav-link text-light active" aria-current="page" href="#conferencia">La conferencia</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#oradores">Los oradores</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#fecha">El lugar y la fecha</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="#anotate">Conviertete en ordador</a></li>
+                        <li class="nav-item"><a class="nav-link text-success" href="/paginas/tickets.html">Comprar tickets</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
 <!--        <div class="col-lg-4 col-md-6 col-sm-12 text-white text-end float-end p-4" >-->
         <div class="text-white caja">
-            <div class="caja1 ">
+            <div class="caja1" id="conferencia">
                 <h4 class="fw-bold" >Conf Bs As</h4>
             </div>
             <div class="caja2">
@@ -50,19 +51,19 @@
                 </p>
             </div>
             <div class="caja3">
-                <button type="button" class="btn btn-outline-light">Quiero ser orador</button>
-                <button type="button" class="btn btn-success">Comprar tickets</button>
+                <a href="#anotate"><button type="button" class="btn btn-outline-light">Quiero ser orador</button></a>
+                <a href="/paginas/tickets.html"><button type="button" class="btn btn-success">Comprar tickets</button></a>
             </div>
         </div>
     </div>
 </section>    
     <!--ACA EMPIEZA EL CONTENIDO DE LA PAGINA-->
     <!--PRIMERA SECCION - CARD (RESPONSIVA OK)-->
-    <div class="text-center">
+    <div class="text-center" id="oradores">
         <h6 class="mb-0">CONOCE A LOS</h2>
         <h2 class="mt-0">ORADORES</h1>
     </div>
-    <section class="container mb-3">
+    <section class="container mb-3" >
         <div class="row row align-middle d-flex justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-12 card mx-4 my-2 p-0 shadow" style="width: 18rem;">
                 <img src="/img/steve.jpg" class="card-img-top img-fluid" alt="Steve Jobs">
@@ -177,7 +178,7 @@
 
 
     <!--SEGUNDA SECCION (RESPONSIVA OK)-->
-    <section class="row">
+    <section class="row" id="fecha">
         <div class="col-lg-6 col-md-12 col-sm-12 p-0">
                 <img class="img-fluid" src="https://i.ibb.co/DLsQ07Z/honolulu.jpg" alt="Imagen principal">
         </div>
@@ -194,7 +195,7 @@
         </div>
     </section>
     <!--TERCERA SECCION - FORM (RESPONSIVA OK)-->
-    <section class="container mt-3 mb-3">
+    <section class="container mt-3 mb-3" id="anotate">
         <div class="text-center">
             <h6 class="text-muted">CONVIERTETE EN UN</h6>
             <h1>ORADOR</h1>
@@ -223,31 +224,31 @@
     </section>
     <!--FOOTER (RESPONSIVA OK)-->
     <section>
-        <nav class="navbar navbar-expand-lg navbar-light bg-warning bg-gradient ">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(var(--bg-secundario), #285c72) ;">
             <div class="container-fluid">
                 <div class="container">
                     <div class="d-flex justify-content-around text-center" id="navbarNav">
                         <ul class="navbar-nav p-2">
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Preguntas frecuentes</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Preguntas frecuentes</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Contáctanos</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Contáctanos</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Prensa</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Prensa</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Conferencias</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Conferencias</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Términos y condiciones</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Términos y condiciones</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Privacidad</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Privacidad</a>
                             </li>
                             <li class="nav-item" >
-                                <a class="nav-link text-white fw-bold" style="margin-right: 30px;" href="#">Estudiantes</a>
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Estudiantes</a>
                             </li>
                         </ul>
                     </div>

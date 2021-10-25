@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Integrador JS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" 
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="../style.css" />
+    
+</head>
+<body>
+    <section>  
+    <!--ACA EMPIEZA EL HEADER-->
+        <nav class="navbar navbar-light navbar-expand-md bg-dark">
+            <div class="container">
+                <a href="../index.html" class="navbar-brand text-white">
+                    <p class="d-lg-inline d-md-none d-sm-none d-none fw-bold">Conf Bs As</p>
+                </a>
+                <button type="button" class="navbar-toggler bg-secondary" data-bs-toggle="collapse" 
+                        data-bs-target="#menu-principal" aria-controls="menu-principal"
+                        aria-expanded="false" aria-label="Desplegar menú de navegación">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu-principal">
+                    <ul class="navbar-nav li-size">
+                        <li class="nav-item"><a class="nav-link text-light active" aria-current="page" href="../index.html#conferencia">La conferencia</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="../index.html#oradores">Los oradores</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="../index.html#fecha">El lugar y la fecha</a></li>
+                        <li class="nav-item"><a class="nav-link text-light" href="../index.html#anotate">Conviertete en ordador</a></li>
+                        <li class="nav-item"><a class="nav-link text-success" href="#">Comprar tickets</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </section>
+    <!--ACA EMPIEZA LA SECCION DE LOS CUADROS-->
+    <section class="mt-4">
+        <div class="container">
+            <div class="box">
+                <div class="col-3 text-center box1" >
+                    <div class="p-3">
+                        <h4>Estudiante</h4>
+                        <h6 class="mt-3">Tienen un descuento</h6>
+                        <p class="mt-4 fw-bolder">80%</p>
+                        <p class="text-muted" style="font-size:0.75rem;">* presentar documentación</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center box2">
+                    <div class="p-3">
+                        <h4>Treinee</h4>
+                        <h6 class="mt-3">Tienen un descuento</h6>
+                        <p class="mt-4 fw-bolder">50%</p>
+                        <p class="text-muted" style="font-size:0.75rem;">* presentar documentación</p>
+                    </div>
+                </div>
+                <div class="col-3 text-center box3">
+                    <div class="p-3">
+                        <h4>Junior</h4>
+                        <h6 class="mt-3">Tienen un descuento</h6>
+                        <p class="mt-4 fw-bolder">15%</p>
+                        <p class="text-muted" style="font-size:0.75rem;">* presentar documentación</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--ACA EMPIEZA LA SECCION PREVIA AL FORM-->
+    <section class="mt-3">
+        <div class="container">
+            <div class="text-center">
+                <h6 class="text-uppercase">Venta</h6>
+                <h1 class="text-uppercase">Valor de ticket $200</h1>
+            </div>
+        </div>
+    </section>
+    <!--PASAR TODO EL FORMULARIO A GRID-->
+    <form class="contenedor needs-validation" id="form" novalidate>
+        <div class="input-nombre position-relative">
+            <input type="text" class="form-control" id="nombre" 
+            placeholder="Nombre" aria-label="nombre" required>
+            <div class="valid-feedback">Se ve bien!</div>
+            <div class="invalid-tooltip">Favor de ingresar un campo</div>
+        </div>
+        <div class="input-apellido position-relative">
+            <input type="text" class="form-control" id="apellido" 
+            placeholder="Apellido" aria-label="apellido" required>
+            <div class="valid-feedback">Se ve bien!</div>
+            <div class="invalid-tooltip">Favor de ingresar un campo</div>
+        </div>
+        <div class="input-correo position-relative">
+            <input type="email" class="form-control has-validation" id="correo" 
+            placeholder="Ejemplo@ConfBsAs.com" aria-label="correo" required>
+            <div class="valid-feedback">Se ve bien!</div>
+            <div class="invalid-tooltip">Favor ingrese un correo válido</div>
+        </div>
+        <div class="select-cantidad position-relative">
+            <label for="cantidad" class="form-label">Cantidad</label>
+            <select class="form-select" id="cantidad" aria-label="cantidad" required>
+                <option selected disabled value>Seleccione cantidad de tickets</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="select-categoria position-relative">
+            <label for="categoria" class="form-label">Categoria</label>    
+            <select class="form-select" id="categoria" aria-label="categoria" required>
+                <option selected disabled value>Elija su categoria</option>
+                <option value="Estudiante">Estudiante</option>
+                <option value="Trainee">Trainee</option>
+                <option value="Junior">Junior</option>
+            </select>
+        </div>
+        <div class="div-tot">
+            <div class="div-total">
+                <span>Total a pagar: </span>
+            </div>
+            <div class="div-pago" id="pago"></div>
+        </div>       
+        <div class="btn-borrar" >
+            <div class="d-grid gap-2">
+                <button class="btn btn-danger col-12" type="button" onclick="limpiar();" >Borrar</button>
+            </div>
+        </div>
+        <div class="btn-resumen" id="resumen" >
+            <div class="d-grid gap-2">
+                <button class="btn btn-success col-12" type="submit" onclick="resumen();" >Resumen</button>        
+            </div>
+        </div>
+        <div class="btn-pagar" id="btn-pagar"></div>
+        <!--MODAL 1-->
+        <div class="modal fade" id="ventanaModal" tabindex="-1" 
+        aria-labelledby="modalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel">Compra Tickets</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="limpiarModal()"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <label for="metodo-pago" class="form-label">Método de pago</label>    
+                                    <select class="form-select" id="metodo" aria-label="metodo-pago" onclick="seleccionMetodo();" required>
+                                        <option selected disabled value>Seleccione método de pago</option>
+                                        <option value="TarjetaDebito" >Tarjeta de débito</option>
+                                        <option value="TarjetaCredito">Tarjeta de credito</option>
+                                        <option value="MercadoPago">MercadoPago</option>
+                                    </select>
+                                </div>
+                                <div class="col-12 mt-3" id="banco-emisor"></div>
+                                <div class="col-12 mt-3" id="numero"></div>
+                                <div class="col-6 mt-3" id="cuotas"></div>
+                                <div class="col-6 mt-3" id="codigo"></div>
+                            </div>
+                            <div class="input-mp" id="mp"></div>                        
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="limpiarModal()">Atrás</button>
+                        <button type="button" class="btn btn-success" data-bs-target="#ventanaModal2" data-bs-toggle="modal">Comprar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- MODAL 2-->
+        <div class="modal fade" id="ventanaModal2" aria-hidden="true" 
+        aria-labelledby="modalLabel2" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="modalLabel2">Compra finalizada</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="limpiar();"></button>
+                    </div>
+                    <div class="modal-body">
+                        Felicitaciones, usted a reservado su ticket con éxito!
+                    </div>
+                    <div class="modal-footer">
+                            <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="limpiar();">Finalizar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <!--ACA EMPIEZA EL FOOTER PASARLO A GRID?--> 
+    <section class="mt-3">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background: linear-gradient(var(--bg-secundario), #285c72) ;">
+            <div class="container-fluid">
+                <div class="container">
+                    <div class="d-flex justify-content-around text-center" id="navbarNav">
+                        <ul class="navbar-nav p-2">
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Preguntas frecuentes</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Contáctanos</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Prensa</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Conferencias</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Términos y condiciones</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Privacidad</a>
+                            </li>
+                            <li class="nav-item" >
+                                <a class="nav-link text-white" style="margin-right: 30px;" href="#">Estudiantes</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </section>    
+
+</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script src="../js/app.js"></script>
+</html>
